@@ -33,6 +33,17 @@ $ r2 <binary>
 > #!pipe python ./r2msdn.py -t urls imports -d
 ```
 
+Requirements
+------------
+
+Aside from the requirements specified in the `requirements.txt` file, you will
+need to install PhantomJS. Not that I want you to go through that hassle, but
+the guys from Microsoft decided that your hardware should be the one setting
+the MSDN layout up. That means we have to execute javascript through a headless
+browser.
+
+You are on your own for NodeJS and PhantomJS. For python requirements, just
+use `$ pip install -r requirements.txt`.
 
 Authors
 ------
