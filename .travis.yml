@@ -1,0 +1,14 @@
+language: python
+sudo: required
+python:
+  - "2.7"
+install:
+  - export prev_path=$PWD
+  - sudo apt-get install nodejs
+  - sudo npm install phantomjs-prebuilt
+  - cd /tmp/ && git clone https://github.com/radare/radare2.git && cd radare2 && ./sys/install.sh
+  - cd $prev_path
+  - export PYTHONPATH=$PYTHONPATH:$pwd
+  - pip install -r requirements.txt
+script:
+  - py.test
